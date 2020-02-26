@@ -1,9 +1,47 @@
 <template>
     <lightning-card title="HelloWorld" icon-name="custom:custom14">
         <div class="slds-m-around_medium">
-            <p>Hellowww222, {greeting}!</p>
-            <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+            <p>Hellowww2224455, {greeting}!</p>
+            <lightning-input
+                label="Name"
+                value={greeting} 
+                onchange={changeHandler}>
+            </lightning-input>
         </div>
+
+        <!-- input with label -->
+        <div class="slds-form-element">
+            <label class="slds-form-element__label" for="text-input-id-1">
+              <abbr class="slds-required" title="required">* </abbr>
+                I am a well behaved Input with a Label
+            </label>
+            <div class="slds-form-element__control">
+              <input type="text" id="text-input-id-1" placeholder="Placeholder Text" required="" class="slds-input" />
+            </div>
+        </div>
+
+        <!-- bad input with NO label -->
+        <div class="slds-form-element">
+           <!-- 
+
+          <label class="slds-form-element__label" for="text-input-id-1">
+                <abbr class="slds-required" title="required">* </abbr>
+          -->
+            I am a terrible Input without a Label (this is just a string)
+            <!-- </label> -->
+            <div class="slds-form-element__control">
+                <input type="text" id="text-input-id-11111" placeholder="Placeholder Text" required="" class="slds-input" />
+            </div>
+        </div>
+
+        <!-- button with icon -->
+        <button class="slds-button slds-button_icon" title="Settings">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#settings"></use>
+            </svg>
+        </button>
+
+
     </lightning-card>
     </template>
     
